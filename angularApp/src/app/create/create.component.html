@@ -1,0 +1,35 @@
+<div class="col-sm-6">
+    <h1>Enregistrer un etudiant</h1>
+    <form>
+
+<form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="num"> Numero </label>
+          <input type="text"
+                 id="num"
+                 class="form-control"
+                 formControlName="num">
+        </div>
+        <div class="form-group">
+            <label for="nom"> Nom </label>
+            <input type="text"
+                   id="nom"
+                   class="form-control"
+                   formControlName="nom">
+          </div>
+          <div class="form-group">
+            <label for="prenom"> Prenom </label>
+            <input type="text"
+                   id="prenom"
+                   class="form-control"
+                   formControlName="prenom">
+          </div>
+       
+        <button class="btn btn-primary"
+                type="submit"
+                [disabled]="createForm.invalid">Enregistrer</button>
+      </form>
+
+    </form>
+
+</div>
